@@ -31,7 +31,7 @@ pip install redis requests
 
 Set environment variables:
 ```bash
-export WEATHERSTACK_API_KEY=YOUR_KEY
+export WEATHERSTACK_API_KEY=YOUR_API_KEY
 export WEATHER_LOCATIONS="New York, USA;Dallas, USA"
 export POLL_INTERVAL_SECONDS=10 # optional, default 60
 ```
