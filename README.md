@@ -17,10 +17,15 @@ Small Weatherstack + Redis polling service
 git clone <this-repo-url>
 cd Weatherstack Redis Poller
 ```
+### Create and activate a virtual environment
+Isolate Python dependencies from your global Python installation.
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
+### Install dependencies
+Install the libraries required to talk to Redis and the Weatherstack API.
+
 ```bash
 pip install --upgrade pip
 pip install redis requests
