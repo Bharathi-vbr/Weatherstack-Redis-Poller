@@ -59,11 +59,10 @@ You will see logs like:
 ---
 
 ## 5. What the code shows
-```bash
 - Periodic API polling for all configured locations. 
 - Redis `GET`, `SETEX` (create with TTL), and update (upsert). 
 - Clear logging around each poll and Redis operation for easy explanation in the interview. 
-```
+
 ## 6. How this could be operationalized
 
 This code is already split into small, reusable pieces: `weather_client.py` (API client), `redis_client.py` (cache client), `config.py` (configuration), and `main.py` (orchestration loop).That makes it easy to drop into a larger system or reuse the clients in other jobs.
