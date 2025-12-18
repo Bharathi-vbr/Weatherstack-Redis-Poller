@@ -64,3 +64,14 @@ You will see logs like:
 - Redis `GET`, `SETEX` (create with TTL), and update (upsert). 
 - Clear logging around each poll and Redis operation for easy explanation in the interview. 
 ```
+## 6. How this could be operationalized
+
+This code is already split into small, reusable pieces: `weather_client.py` (API client), `redis_client.py` (cache client), `config.py` (configuration), and `main.py` (orchestration loop).[page:1] That makes it easy to drop into a larger system or reuse the clients in other jobs.
+
+**If turning this into a production-style service, some next steps would be:**
+
+- Containerize it (e.g., Docker) and pass all configuration through environment variables, so the same image can run in dev/staging/prod.
+- Run it under a scheduler/orchestrator (systemd timer, Kubernetes Deployment or CronJob) to control frequency and rollout.
+- Add basic observability: metrics (poll success/failure, cache hits/misses) and structured logs for easy debugging.
+- Add a few small unit tests for configuration and Redis key/TTL behavior to make it safer to reuse and extend.
+
