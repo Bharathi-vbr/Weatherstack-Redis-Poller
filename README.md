@@ -66,7 +66,7 @@ You will see logs like:
 ```
 ## 6. How this could be operationalized
 
-This code is already split into small, reusable pieces: `weather_client.py` (API client), `redis_client.py` (cache client), `config.py` (configuration), and `main.py` (orchestration loop).[page:1] That makes it easy to drop into a larger system or reuse the clients in other jobs.
+This code is already split into small, reusable pieces: `weather_client.py` (API client), `redis_client.py` (cache client), `config.py` (configuration), and `main.py` (orchestration loop).That makes it easy to drop into a larger system or reuse the clients in other jobs.
 
 **If turning this into a production-style service, some next steps would be:**
 
