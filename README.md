@@ -15,7 +15,7 @@ Small Weatherstack + Redis polling service
 ## 2. Setup
 ```bash
 git clone <this-repo-url>
-cd Flight-Polling-Service
+cd Weatherstack Redis Poller
 ```
 ```bash
 python3 -m venv venv
